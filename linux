@@ -11,3 +11,24 @@ paste -d= 12.txt 3.txt > =.txt 两个文件行合并
 paste -d= 0109buten.txt 0109right.dat > .dat
 
 sed -i 's/\r$//' 文件名 修改Windows回车
+
+------------------------
+root@ubuntu:~# cat a
+0
+2
+0
+root@ubuntu:~# cat 1.sh
+line=$1
+n_num=`sed -n "${line}p" a`
+num=`expr $n_num + 1`
+sed -i "${line}s/.*/$num/g" a
+cat a
+root@ubuntu:~# sh 1.sh 2
+0
+3
+0
+root@ubuntu:~# sh 1.sh 3
+0
+3
+1
+------------------------
