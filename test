@@ -9,3 +9,5 @@ awk '{print $1,substr($1,1,2)}' b_code.txt  取每行前几个字符
 paste -d= 12.txt 3.txt > =.txt 两个文件行合并
 
 paste -d= 0109buten.txt 0109right.dat > .dat
+
+sed -i 's/\r$//' 文件名 修改Windows回车
