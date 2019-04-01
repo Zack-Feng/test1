@@ -11,6 +11,7 @@ paste -d= 12.txt 3.txt > =.txt 两个文件行合并
 paste -d= 0109buten.txt 0109right.dat > .dat
 
 sed -i 's/\r$//' 文件名 修改Windows回车
+sed -i "s/$/\r/g" input.txt  替换行末\n（linux换行符）为\r\n（windows换行符）
 
 ------------------------
 root@ubuntu:~# cat a
